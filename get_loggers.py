@@ -1,6 +1,5 @@
 import logging
-import logging.handlers
-from handlers import BufferingSMTPHandler
+
 
 def get_logger():
     formatter = logging.Formatter(
@@ -14,14 +13,11 @@ def get_logger():
     console_handler.setFormatter(formatter)
     console_handler.setLevel(logging.DEBUG)
 
-    smtp_handler = BufferingSMTPHandler()
-    smtp_handler.setLevel(logging.CRITICAL)
 
     logger = logging.getLogger('app_logger')
     logger.setLevel(logging.DEBUG)
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
-    logger.addHandler(smtp_handler)
 
     return logger
 
