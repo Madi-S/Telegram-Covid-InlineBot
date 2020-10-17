@@ -1,10 +1,10 @@
 import requests
 
-url = "https://covid-193.p.rapidapi.com/countries"
+url = 'https://covid-193.p.rapidapi.com/countries'
 
 headers = {
-    'x-rapidapi-host': "covid-193.p.rapidapi.com",
-    'x-rapidapi-key': "e3a8dbeca1mshfffc2e32f1bef5dp161597jsn03514351c7bb"
+    'x-rapidapi-host': 'covid-193.p.rapidapi.com',
+    'x-rapidapi-key': 'READ README TO GET THE RAPIDAPI KEY'
 }
 
 r = requests.get(url, headers=headers).json()['response']
