@@ -6,7 +6,7 @@ from stats import get_stats
 from searcher import Searcher
 
 from uuid import uuid4
-from test import get_logger
+from get_loggers import get_logger
 
 
 s = Searcher()
